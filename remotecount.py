@@ -1,7 +1,7 @@
 ## Implementation notes:
 # A small tool that calculates the number of moves necessary to enter a given word using
 # a remote control and an on-screen keyboard (able to move up, down, left, right)
-# and adds one to count clicking 'OK' at the end :)
+# and adds one to count clicking 'OK' for each character.
 #
 # Use the example of 'chi' name to test
 # Define a method that can find the position of a character in a multi-dimensional list
@@ -13,6 +13,7 @@
 ## TODO:
 # Santise the input - convert to lowercase, check for non-existant characters
 # Handle other edge cases (e.g. a map that has the same character twice)
+# Allow word to be provided by commandline argument
 
 class WordFinder:
 
@@ -28,10 +29,6 @@ class WordFinder:
             total_moves += char_moves['moves']
             startpos = char
 
-        # add one for hitting 'OK' on the remote
-        print('adding 1 to hit that OK button...')
-        total_moves += 1 
-
         return total_moves
 
     def calculate_moves(self, startchar, targetcharacter):
@@ -43,15 +40,15 @@ class WordFinder:
         xmoves = abs(start_pos[0]-target_pos[0])
         ymoves = abs(start_pos[1]-target_pos[1])
 
-        moves = xmoves + ymoves
-        # add the lateral and longitudinal moves
+        moves = xmoves + ymoves + 1
+        # add the lateral and longitudinal moves, plus 1 for 'OK'
 
         result = {
             'moves' : moves,
             'endpos' : target_pos
         }
 
-        print(moves)
+        print("{} moves required...".format(moves))
 
         return result
 
