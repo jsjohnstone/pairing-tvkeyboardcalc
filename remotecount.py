@@ -1,16 +1,18 @@
-# Use the xample of 'Chi' name to test
-# Santise the input - convert to lowercase, check for non-existant characters
-
+## Implementation notes:
+# A small tool that calculates the number of moves necessary to enter a given word using
+# a remote control and an on-screen keyboard (able to move up, down, left, right)
+# and adds one to count clicking 'OK' at the end :)
+#
+# Use the example of 'chi' name to test
+# Define a method that can find the position of a character in a multi-dimensional list
+# Define a method that calculates the number of moves from character a to b based on above position
 # Define a method that breaks the word up into a list of characters
-
-# Define a method that iterates through the word list and counts the moves for each letter in order
-
-# x Define a method that calculates the number of moves from position a to b
-
-# TODO:
-# x Define the data model as a two-dimensional array (using a dictionary and lists)
-
-# x Define a class, set instance variables including a cursor from 0,0 (x,y) and the word
+# Define a method that iterates through the word list and counts the moves for each letter
+# Return the total count of moves
+#
+## TODO:
+# Santise the input - convert to lowercase, check for non-existant characters
+# Handle other edge cases (e.g. a map that has the same character twice)
 
 class WordFinder:
 
@@ -74,6 +76,7 @@ class WordFinder:
 
 ### MAIN PROGRAM
 
+# Given a remote map that looks like this...
 remote_map = [
     ['a', 'b', 'c', 'd', 'e', '1', '2', '3'],
     ['f', 'g', 'h', 'i', 'j', '4', '5', '6'],
@@ -82,9 +85,12 @@ remote_map = [
     ['u', 'v', 'w', 'x', 'y', 'z', '_', '/']
 ]
 
-word = 'jamie'
+# ...how many moves are required to spell out the following?
+word = 'chi'
 
+# Make a class and submit the word and map
 service = WordFinder()
 count = service.calculate(remote_map, word)
 
+# Print out the returned move count!
 print("Total number of moves taken is: {}".format(count))
