@@ -1,4 +1,4 @@
-# tr-pairingExercise - TV Keyboard Calculator
+# tr-pairing-exercise - TV Keyboard Calculator
 Pairing exercise
 
 This was a simple pairing exercise aimed to create a tool that could calculate the number of
