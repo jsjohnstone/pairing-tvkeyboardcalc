@@ -1,9 +1,8 @@
 # tr-pairing-exercise - TV Keyboard Calculator
 Pairing exercise
 
-This was a simple pairing exercise aimed to create a tool that could calculate the number of
-'moves' required to enter a word on an on-screen keyboard using a remote with left,right,up,down 
-buttons.
+This was a simple pairing exercise, part of the Tech Returners application process, aimed to create a tool that could calculate the number of
+'moves' required to enter a word on an on-screen keyboard using a remote with left,right,up,down buttons.
 
 Notes:
 - The cursor always starts on the letter a (top left)
